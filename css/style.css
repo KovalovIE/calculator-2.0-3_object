@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: black;
+    position: relative;
+}
+body section {
+    position: absolute;
+    left: calc(50% - 200px);
+    margin-top: 100px;
+}
+div {
+    background: grey;
+    padding: 10px;
+}
+section {
+    display: grid;
+    grid-row-gap: 10px;
+    width: 400px;
+}
+form, table {
+    display: flex;
+    justify-content: center;
+}
+button,
+input {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    margin: 1px;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+button:hover,
+.digit-bg:hover,
+.math-signs:hover {
+    color: white;
+    background: #605c5c;
+}
+sup {
+    font-size: 10px;
+}
+.scoreboard-value {
+    width: 475px;
+    font-size: 30px;
+}
+.digit-bg {
+    font-size: 20px;
+    font-weight: 700;
+    background: white;
+}
+.btn-disabled {
+    color: #a4a4a4;
+}
+.btn-disabled:hover {
+    color: #a4a4a4;
+    background: #f1f1f1;
+}

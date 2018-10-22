@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return 3 object</title>
+
+</head>
+<body>
+
+<script>
+    const Dates = {
+        date1: 1539869400,
+        date2: 1539860000,
+        date3: 1539861100,
+        date4: 1539869200,
+        date5: 1539869300,
+        date6: 15398694400,
+        date7: 1539865400
+    };
+    const Person = {
+        name: "Vasya",
+        gender: 'male',
+        age: 99,
+        getInfo: function () { return "This is a " + this.gender + " aged " + this.age } // () =>  "This is a " + this.gender + " aged " + this.age
+    };
+    const TaxPayer1 = {
+        //prototype: Human,
+        name: "Vasya",
+        age: 99,
+        getInfo: function () { return "This is a " + this.gender + " aged " + this.age }, // () =>  "This is a " + this.gender + " aged " + this.age
+        Company: {
+            name: "DTEK",
+//                    employees: {
+//                        TaxPayer1,
+//                        TaxPayer2,
+//                        TaxPayer3
+//                    }
+        }
+    };
+    //function Human() { hasBrains = true, walkStraight = () => "isWalking"}
+
+    function returnObj1(obj) {
+        var newObj1 = Object.create(obj);
+        return newObj1
+    };
+
+    function returnObj2 (obj) {
+        var newObj2 = Object.assign(obj);
+        return newObj2
+    };
+
+    function returnObj3 (obj) {
+        var newObj3 = {};
+        for (var x in obj) {
+            newObj3[x] = obj[x]
+        }
+        return newObj3
+    }
+
+        //let newObj = returnObj1(Person)
+        console.log(returnObj1(Dates));
+        console.log(returnObj2(Person));
+        console.log(returnObj3(TaxPayer1))
+</script>
+
+</body>
+</html>
